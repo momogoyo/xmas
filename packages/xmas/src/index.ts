@@ -1,6 +1,6 @@
 import { h, render as prender } from 'preact'
 import { config as defaultConfig } from '@/config'
-import { assign } from '@momogoyo/sound-scape-shared'
+import { assign } from '@momogoyo/xmas-shared'
 import { sounds, effects } from '@/spatial'
 import Component from '@/components/SoundScape'
 
