@@ -1,36 +1,13 @@
-# SoundScape
+# xmas
 
 ## 소개
-SoundScape는 웹 환경에서 BGM, 효과음을 조합한 사운드 환경을 제공하는 공간 음향 패키지입니다.
-이 npm 패키지는 Vite, TypeScript, Preact 등의 현대적인 기술을 사용하고 있습니다.
-
-## 시작하기
-
-### 설치
-SoundScape를 설치하려면 터미널에서 다음 명령어를 실행하세요
-
-```
-npm install @momogoyo/sound-scape
-```
-
-## 사용법
-사용하고자 하는 프로젝트에 SoundScape를 다음과 같이 `import` 합니다
-
-```javascript
-import SoundScape from '@momogoyo/sound-scape'
-```
-
-### 실행
-다음 명령어로 프로젝트를 실행합니다
-파일 변경을 감지하기 때문에 변경에 따라 다시 자동으로 빌드됩니다
-```
-npm run dev
-```
+크리스마스 프로젝트로 시작한 크리스마스 공간 음향 서비스입니다.
+크리스마스 분위기의 음향과 귀여운 미더덕이 조화를 이룬 프로젝트로 이번 크리스마스를 좀 더 따뜻하게 보내보아요! 🎄
 
 ## 의존성
 해당 패키지는 다음 의존성을 가지고 있습니다
 
-- `@momogoyo/sound-scape-shared`: utils 집합
+- `@momogoyo/xmas-shared`: utils 집합
 - `@emotion/css`: 스타일링을 위한 CSS 스타일을 라이브러리
 - `eventemitter3`
 - `preact`
@@ -48,4 +25,4 @@ npm run dev
 최신 버전은 1.0.0입니다.
 
 ## 저장소
-저장소는 [여기](https://github.com/momogoyo/soundScape.git)에서 찾을 수 있습니다.
+저장소는 [여기](https://github.com/momogoyo/xmas.git)에서 찾을 수 있습니다.

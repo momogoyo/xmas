@@ -1,8 +1,8 @@
-import SoundScape from '@momogoyo/sound-scape'
+import Xmas from '@momogoyo/xmas'
 
 const host = '/public/samples'
 
-SoundScape.connect({
+Xmas.connect({
   sounds: [
     {
       key: 'jazzy_10',
@@ -70,13 +70,13 @@ SoundScape.connect({
   ]
 })
 
-SoundScape.render(document.getElementById('soundScape') as HTMLElement, {
+Xmas.render(document.getElementById('xmas') as HTMLElement, {
   onClose: () => {
     console.log('close')
   }
 })
 
-// const [sounds, { play, pause, skipNext, current }] = SoundScape.musics()
+// const [sounds, { play, pause, skipNext, current }] = Xmas.musics()
 
 // document.body.onclick = () => {
 //   play()
@@ -87,7 +87,7 @@ SoundScape.render(document.getElementById('soundScape') as HTMLElement, {
 // }, 2000)
 
 
-// const { rain, fire } = SoundScape.nosises()
+// const { rain, fire } = Xmas.nosises()
 
 
 // rain.play()

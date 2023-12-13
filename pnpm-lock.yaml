@@ -28,12 +28,12 @@ importers:
         specifier: ^3.0.0
         version: 3.2.5(@types/node@18.14.2)
 
-  packages/soundScape:
+  packages/xmas:
     dependencies:
       '@emotion/css':
         specifier: ^11.10.0
         version: 11.10.6
-      '@momogoyo/sound-scape-shared':
+      '@momogoyo/xmas-shared':
         specifier: workspace:*
         version: link:../shared
       eventemitter3:
@@ -67,9 +67,9 @@ importers:
 
   playground:
     dependencies:
-      '@momogoyo/sound-scape':
+      '@momogoyo/xmas':
         specifier: workspace:*
-        version: link:../packages/soundScape
+        version: link:../packages/xmas
     devDependencies:
       typescript:
         specifier: ^4.6.4

@@ -6,15 +6,15 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, './src/index.ts'),
-      name: 'soundScape',
-      fileName: 'soundScape',
+      name: 'xmas',
+      fileName: 'xmas',
       formats: ['es', 'umd']
     },
     rollupOptions: {
       output: {
         exports: 'named',
         globals: {
-          soundScape: 'soundScape'
+          xmas: 'xmas'
         }
       }
     },

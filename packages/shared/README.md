@@ -1,1 +1,1 @@
-# @momogoyo/shared
+# @momogoyo/xmas-shared
