@@ -1,21 +1,18 @@
 {
   "name": "xmas",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "pnpm --parallel -r dev",
-    "build": "pnpm --parallel -r build",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "deploy:soundScape": "pnpm publish ./packages/soundScape",
-    "deploy:shared": "pnpm publish ./packages/shared"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "vitepress": "1.0.0-alpha.29",
-    "vue": "^3.2.45"
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "pixi.js": "^7.3.2"
   }
 }
