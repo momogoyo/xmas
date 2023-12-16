@@ -1,7 +1,7 @@
-import { Howl, Howler } from 'howler'
+import { Howl } from 'howler'
 import { config } from '@/config'
 import { sounds as context } from '@/context'
-import { once } from '@momogoyo/sound-scape-shared'
+import { once } from '@momogoyo/xmas-shared'
 import { Events } from '@/constants'
 
 export type ReturnedValue = [

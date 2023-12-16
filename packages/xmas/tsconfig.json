@@ -13,7 +13,8 @@
     "skipLibCheck": true,
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "public/assets.d.ts"
   ],
   "exclude": [
     "node_modules",

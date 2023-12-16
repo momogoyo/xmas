@@ -1,7 +1,7 @@
 import { Howl } from 'howler'
 import { config } from '@/config'
 import { effects as context } from '@/context'
-import { once } from '@momogoyo/sound-scape-shared'
+import { once } from '@momogoyo/xmas-shared'
 import { Events } from '@/constants'
 
 export type ReturnedValue = [{
