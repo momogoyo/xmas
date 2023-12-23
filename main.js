@@ -1,5 +1,6 @@
 import './style.css'
 import { resource } from './src/Resource'
+import { Sprite } from './src/Sprite'
 
 const canvas = document.querySelector('#xmas-canvas')
 const context = canvas.getContext('2d')
@@ -16,19 +17,14 @@ const draw = () => {
   if (ground.isLoaded) {
     context.drawImage(ground.image, 0, 0)
   }
-
-  const metheduck = resource.images.metheduck
-
-  if (metheduck.isLoaded) {
-    context.drawImage(metheduck.image, 0, 0)
-  }
-
-  const shadow = resource.images.shadow
-
-  if (shadow.isLoaded) {
-    context.drawImage(shadow.image, 0, 0)
-  }
 }
+
+const sprite = new Sprite({
+  reousrce: resource.images.metheduck,
+  vFrames: 1,
+  hFrames: 2,
+  frame: 1
+})
 
 setInterval(() => {
   draw()
