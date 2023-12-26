@@ -1,30 +1,33 @@
 import './style.css'
 import { resource } from './src/Resource'
 import { Sprite } from './src/Sprite'
+import { Vector2 } from './src/Vector2'
 
 const canvas = document.querySelector('#xmas-canvas')
 const context = canvas.getContext('2d')
 
-const draw = () => {
-  const sky = resource.images.sky
+const skySprite = new Sprite({
+  resource: resource.images.sky,
+  frameSize: new Vector2(640, 360)
+})
 
-  if (sky.isLoaded) {
-    context.drawImage(sky.image, 0, 0)
-  }
+const groundSprite = new Sprite({
+  resource: resource.images.ground,
+  frameSize: new Vector2(640, 360)
+})
 
-  const ground = resource.images.ground
-
-  if (ground.isLoaded) {
-    context.drawImage(ground.image, 0, 0)
-  }
-}
-
-const sprite = new Sprite({
-  reousrce: resource.images.metheduck,
-  vFrames: 1,
-  hFrames: 2,
+const duckSprite = new Sprite({
+  resource: resource.images.metheduck,
+  frameSize: new Vector2(64, 64),
+  hFrames: 1,
+  vFrames: 12,
   frame: 1
 })
+
+const draw = () => {
+  skySprite.drawImage(context, 0, 0)
+  groundSprite.drawImage(context, 0, 0)
+}
 
 setInterval(() => {
   draw()
