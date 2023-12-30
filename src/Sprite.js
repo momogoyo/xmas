@@ -11,7 +11,7 @@ export class Sprite {
     position // 그릴 위치 (top left corner...)
   }) {
     this.resource = resource
-    this.frameSize = frameSize ?? new Vector2(32, 32)
+    this.frameSize = frameSize ?? new Vector2(48, 48)
     this.hFrames = hFrames ?? 1
     this.vFrames = vFrames ?? 1
     this.frame = frame ?? 0
