@@ -2,6 +2,7 @@ import './style.css'
 import { resource } from './src/Resource'
 import { Sprite } from './src/Sprite'
 import { Vector2 } from './src/Vector2'
+import { GameLoop } from './src/GameLoop'
 
 const canvas = document.querySelector('#xmas-canvas')
 const context = canvas.getContext('2d')
@@ -43,7 +44,9 @@ const draw = () => {
   duckSprite.drawImage(context, duckPosX, duckPosY)
 }
 
-setInterval(() => {
-  duckSprite.frame = (duckSprite.frame + 1) % 12
-  draw()
-}, 300)
+const update = () => {
+  duckSprite.frame += 1
+}
+
+const gameLoop = new GameLoop(update, draw)
+gameLoop.start()
