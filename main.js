@@ -3,6 +3,7 @@ import { resource } from './src/Resource'
 import { Sprite } from './src/Sprite'
 import { Vector2 } from './src/Vector2'
 import { GameLoop } from './src/GameLoop'
+import { Control, DOWN, UP, LEFT, RIGHT } from './src/Control'
 
 const canvas = document.querySelector('#xmas-canvas')
 const context = canvas.getContext('2d')
@@ -22,7 +23,7 @@ const duckSprite = new Sprite({
   frameSize: new Vector2(48, 48),
   hFrames: 12,
   vFrames: 1,
-  frame: 5
+  frame: 1
 })
 
 const shadowSprite = new Sprite({
@@ -31,6 +32,7 @@ const shadowSprite = new Sprite({
 })
 
 const duckPos = new Vector2(48 * 5, 48 * 6)
+const control = new Control()
 
 const draw = () => {
   skySprite.drawImage(context, 0, 0)
@@ -45,7 +47,21 @@ const draw = () => {
 }
 
 const update = () => {
-  duckSprite.frame += 1
+  const { direction } = control
+
+  if (direction === DOWN) {
+    duckPos.y += 1
+    duckSprite.frame = 0
+  } else if (direction === UP) {
+    duckPos.y -= 1
+    duckSprite.frame = 9
+  } else if (direction === LEFT) {
+    duckPos.x -= 1
+    duckSprite.frame = 5
+  } else if (direction === RIGHT) {
+    duckPos.x += 1
+    duckSprite.frame = 8
+  }
 }
 
 const gameLoop = new GameLoop(update, draw)
