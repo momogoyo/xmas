@@ -37,11 +37,13 @@ export class Sprite {
     }
   }
 
+  // canvasContext, 이미지가 그려질 위치 x, y
   drawImage (context, x, y) {
     if (!this.resource.isLoaded) {
       return
     }
 
+    // 이미지에서 그리고자하는 시작 좌표
     let frameCoordX = 0
     let frameCoordY = 0
 
@@ -51,9 +53,21 @@ export class Sprite {
       frameCoordY = frame.y
     }
 
+    // 캔버스에 그릴 이미지 부분에 대한 크기
     const frameSizeX = this.frameSize.x
     const frameSizeY = this.frameSize.y
 
+    /* drawImage(
+      image: 캔버스에 그릴 이미지 [Image | Canvas | Video]
+      sx: 원본 이미지에서 그릴 부분의 x좌표
+      sy: 원본 이미지에서 그릴 부분의 y좌표
+      sWidth: 원본 이미지에서 그릴 부분의 너비
+      sHeight: 원본 이미지에서 그릴 부분의 높이
+      dx: 캔버스에 그릴 이미지의 x좌표
+      dy: 캔버스에 그릴 이미지의 y좌표
+      dWidth: 캔버스에 그릴 이미지의 너비
+      dHeight: 캔버스에 그릴 이미지의 높이
+    ) */
     context.drawImage(
       this.resource.image,
       frameCoordX,
