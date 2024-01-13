@@ -8,7 +8,6 @@ export const gridCell = n => {
 // Set을 사용해서 이동하려는 좌표에 벽이 있는지 확인
 export const isSpaceFree = (wall, x, y) => {
   const str = `${x}, ${y}`
-  console.log(str)
   const isWallPresent = wall.has(str)
 
   return !isWallPresent

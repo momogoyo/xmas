@@ -8,7 +8,8 @@ export class Sprite {
     vFrames, // 이미지 스프라이트 수직
     frame, // 보여줄 프레임
     scale, // 그릴 이미지 크기
-    position // 그릴 위치 (top left corner...)
+    position, // 그릴 위치 (top left corner...)
+    animations
   }) {
     this.resource = resource
     this.frameSize = frameSize ?? new Vector2(48, 48)
@@ -18,6 +19,7 @@ export class Sprite {
     this.frameMap = new Map()
     this.scale = scale ?? 1
     this.position = position ?? new Vector2(0, 0)
+    this.animations = animations
 
     this.buildFrameMap()
   }
@@ -35,6 +37,15 @@ export class Sprite {
         frameCount++
       }
     }
+  }
+
+  step (deltaTime) {
+    if (!this.animations) {
+      return
+    }
+
+    this.animations.step(deltaTime)
+    this.frame = this.animations.frame
   }
 
   // canvasContext, 이미지가 그려질 위치 x, y
