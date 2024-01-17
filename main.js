@@ -1,4 +1,5 @@
 import './style.css'
+import { createEvents } from './src/events'
 import { resource } from './src/Resource'
 import { Sprite } from './src/Sprite'
 import { Vector2 } from './src/Vector2'
@@ -10,9 +11,14 @@ import { gridCell, isSpaceFree } from './src/helpers/grid'
 import { moveTowards } from './src/helpers/moveTowards'
 import { walls } from './src/levels/level1'
 import { STAND_DOWN, STAND_UP, STAND_LEFT, STAND_RIGHT, WALK_DOWN, WALK_UP, WALK_LEFT, WALK_RIGHT } from './src/objects/Duck/duckAnimation'
+import { SoundScape } from './src/SoundScape'
 
+const events = createEvents()
 const canvas = document.querySelector('#xmas-canvas')
 const context = canvas.getContext('2d')
+
+const soundScape = new SoundScape(events)
+soundScape.play()
 
 const skySprite = new Sprite({
   resource: resource.images.sky,
@@ -86,8 +92,12 @@ const tryMove = () => {
     return
   }
 
+  const { x, y } = duckSprite.position
+  events.emit('position', { x, y })
+
   let nextX = duckDestinationPosition.x
   let nextY = duckDestinationPosition.y
+
   const GRIDSIZE = 48
   
   if (control.direction === DOWN) {
