@@ -1,5 +1,7 @@
 # xmas
 
+<img width="1440" alt="IMG_0784 1" src="https://github.com/momogoyo/xmas/assets/131684279/56fc968e-7fe8-4deb-a7a0-8e8e15fe6a8e">
+
 ## 소개
 크리스마스 프로젝트로 시작한 크리스마스 공간 음향 서비스입니다.
 크리스마스 분위기의 음향과 귀여운 미더덕이 조화를 이룬 프로젝트로 이번 크리스마스를 좀 더 따뜻하게 보내보아요! 🎄
